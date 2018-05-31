@@ -23,3 +23,6 @@ colorscheme onedark
 nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-Tab> <C-d>
+
+" Use mouse to select in visual block mode
+set mouse+=a
