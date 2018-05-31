@@ -11,6 +11,9 @@ let &t_AF="\e[38;5;%dm"
 set background=dark
 syntax on
 
+" Fix backspacing in insert mode (https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode)
+set backspace=indent,eol,start
+
 packadd! onedark.vim
 
 colorscheme onedark
