@@ -10,9 +10,9 @@ foreach($line in (Invoke-webrequest -URI "https://raw.githubusercontent.com/itsj
     code --install-extension $line
 }
 # configure vscode
-(New-Object System.Net.WebClient).DownloadFile( 'https://raw.githubusercontent.com/itsjohnward/dotfiles/master/vscode/settings.json', '$env:APPDATA/Code/User/settings.json' )
+(New-Object System.Net.WebClient).DownloadFile( 'https://raw.githubusercontent.com/itsjohnward/dotfiles/master/vscode/settings.json', "$env:APPDATA/Code/User/settings.json" )
 
 # configure terminus
-(New-Object System.Net.WebClient).DownloadFile( 'https://raw.githubusercontent.com/itsjohnward/dotfiles/master/windows/terminus/config.yaml', '$env:APPDATA/Roaming/Terminus/config.yaml' )
+(New-Object System.Net.WebClient).DownloadFile( 'https://raw.githubusercontent.com/itsjohnward/dotfiles/master/windows/terminus/config.yaml', "$env:APPDATA/Terminus/config.yaml" )
 
 # Enter bash and execute playbook with "-t windows"
