@@ -5,6 +5,8 @@ foreach ($line in (Invoke-webrequest -URI "https://raw.githubusercontent.com/its
     choco install $line
 }
 
+refreshenv # register the new "code" command
+
 # install vscode extensions
 foreach ($line in (Invoke-webrequest -URI "https://raw.githubusercontent.com/itsjohnward/dotfiles/master/vscode/extensions.txt").Content -split [Environment]::NewLine) {
     code --install-extension $line
