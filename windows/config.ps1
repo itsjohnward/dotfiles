@@ -1,14 +1,14 @@
 ./windows/install-chocolatey # Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # install programs with chocolatey
-foreach ($line in (Invoke-webrequest -URI "https://raw.githubusercontent.com/itsjohnward/dotfiles/master/windows/choco-programs.txt").Content -split [Environment]::NewLine) {
+foreach ($line in Get-Content windows/choco-programs) {
     choco install $line
 }
 
 $env:Path += ";C:\Program Files\Microsoft VS Code" # register the new "code" command
 
 # install vscode extensions
-foreach ($line in (Invoke-webrequest -URI "https://raw.githubusercontent.com/itsjohnward/dotfiles/master/vscode/extensions.txt").Content -split [Environment]::NewLine) {
+foreach ($line in Get-Content vscode/extensions.txt) {
     code --install-extension $line
 }
 # configure vscode
