@@ -21,3 +21,9 @@ cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
 ```
+
+## Run ansible playbook
+
+```
+ansible-playbook main.yml --connection=local -t [windows|mac|linux]
+```

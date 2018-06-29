@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: "Ansible is working!"
+      tags:
+        - always
+
+    - debug:
+        msg: "Windows"
+      tags:
+        - windows
+
+    - debug:
+        msg: "Mac"
+      tags:
+        - mac
+
+    - debug:
+        msg: "Linux"
+      tags:
+        - linux
