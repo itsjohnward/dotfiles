@@ -11,6 +11,82 @@
       tags:
         - windows
 
+    # install/uninstall with chocolatey
+    - name: Ensure Chocolatey packages are installed 
+      win_chocolatey:
+        name: "{{item}}"
+        state: present
+      with_items:
+        - "vscode"
+        - "terminus --pre"
+        - "googlechrome"
+      tags:
+        - windows
+
+    - name: Make sure VS Code preferences directory exists
+      win_file:
+        path: "$env:APPDATA/Code/User/"
+        state: directory
+      tags:
+        - windows
+
+    - name: Download VS Code preferences
+      win_get_url:
+        url: https://raw.githubusercontent.com/itsjohnward/dotfiles/master/vscode/settings.json
+        dest: "$env:APPDATA/Code/User/settings.json"
+      tags:
+        - windows
+
+    - name: Make sure VS Code is on the path
+      win_path:
+        elements:
+        - "C:/Program Files/Microsoft VS Code"
+      tags:
+        - windows
+
+    - name: Read VS Code extensions file
+      win_shell: cat vscode/extensions.txt
+      register: extensions
+      tags:
+        - windows
+
+    - name: Install VS Code extensions
+      win_shell: "code --install-extension {{item}}"
+      with_items: extensions.stdout_lines
+      tags:
+        - windows
+
+    - name: Make sure Terminus preferences directory exists
+      win_file:
+        path: "$env:APPDATA/Terminus/"
+        state: directory
+      tags:
+        - windows
+
+    - name: Copy a single file where the source is on the remote host
+      win_copy:
+        src: "windows/terminus/config.yaml"
+        dest: "$env:APPDATA/Terminus/config.yaml"
+        remote_src: True
+      tags:
+        - windows
+
+    - name: Install all critical and security updates
+      win_updates:
+        category_names:
+        - CriticalUpdates
+        - SecurityUpdates
+        state: installed
+      register: update_result
+      tags:
+        - windows
+
+    - name: reboot host if required
+      win_reboot:
+      when: update_result.reboot_required
+      tags:
+        - windows
+
     - debug:
         msg: "Mac"
       tags:
