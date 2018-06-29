@@ -88,11 +88,43 @@
         - windows
 
     - debug:
-        msg: "Mac"
+        msg: "TODO: {{item}}"
+      with_items:
+        - "install unity"
+        - "install blender"
+        - "install postman"
+      tags:
+        - windows
+
+    - name: "Mac"
+      debug:
+        msg: "TODO: {{item}}"
+      with_items:
+        - "Install homebrew and brew packages"
+        - "Configure spectacle"
+        - "Set up docker daemon"
       tags:
         - mac
 
-    - debug:
-        msg: "Linux"
+    - name: "Linux"
+      debug:
+        msg: "TODO: {{item}}"
+      with_items:
+        - "Update package manager & install packages"
+        - "Install docker and set up daemon"
       tags:
+        - linux
+
+    - name: "Mac AND Linux"
+      debug:
+        msg: "TODO: {{item}}"
+      with_items:
+        - "Configure github credentials"
+        - "Make sure virtualenv and python2/python3 and their pips are installed correctly"
+        - "Set up direnv to automatically switch pythons when there's a virtualenv"
+        - "Install nvm & set default node to latest"
+        - "Generate dotfiles from template"
+        - "Configure gcloud toolchain (https://cloud.google.com/sdk/docs/quickstarts)"
+      tags:
+        - mac
         - linux
