@@ -10,4 +10,4 @@ for:
     only:
       - image: Ubuntu
   build_script:
-  - sh: sudo chmod +x ubuntu.bootstrap.sh; ./ubuntu.bootstrap.sh
+  - sh: /bin/bash ubuntu.bootstrap.sh
