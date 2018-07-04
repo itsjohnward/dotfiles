@@ -6,6 +6,7 @@ foreach ($line in Get-Content vscode/extensions.txt) {
 }
 
 # make sure the directory exists
+New-Item -ItemType Directory -Force -Path "$env:APPDATA/Code/"
 New-Item -ItemType Directory -Force -Path "$env:APPDATA/Code/User/"
 
 # configure vscode
