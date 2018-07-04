@@ -1,4 +1,4 @@
-./scripts/enable-wsl
+#./scripts/enable-wsl
 ./scripts/install-chocolatey
 ./scripts/install-choco-packages
 ./scripts/configure-vscode
