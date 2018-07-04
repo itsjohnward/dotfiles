@@ -1,7 +1,7 @@
 $env:Path += ";C:\Program Files\Microsoft VS Code" # register the new "code" command
 
 # install vscode extensions
-foreach ($line in Get-Content vscode/extensions.txt) {
+foreach ($line in Get-Content ./configs/vscode/extensions.txt) {
     code --install-extension $line
 }
 
