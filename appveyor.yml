@@ -1,4 +1,13 @@
 version: 1.0.{build}
-image: Visual Studio 2017
+image:
+- Visual Studio 2017
+- Ubuntu
 build_script:
-- ps: ./windows/config.ps1
+- ps: ./windows.bootstrap.ps1
+for:
+-
+  matrix:
+    only:
+      - image: Ubuntu
+  build_script:
+  - sh: ./ubuntu.bootstrap.sh
