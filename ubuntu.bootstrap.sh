@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./scripts/install-python.sh
+sudo ./scripts/install-python.sh
 
 git clone https://github.com/itsjohnward/dotfiles.git
 cd dotfiles
