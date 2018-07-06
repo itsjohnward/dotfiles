@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo ./scripts/install-python.sh
+printenv
+
+printenv APPVEYOR_BUILD_FOLDER
+
+sudo $(APPVEYOR_BUILD_FOLDER)/scripts/install-python.sh
 
 git clone https://github.com/itsjohnward/dotfiles.git
 cd dotfiles
