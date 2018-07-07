@@ -15,7 +15,7 @@ locate -br '^virtualenvwrapper.sh$'
 echo locate -br '^virtualenvwrapper.sh$'
 echo '---'
 
-echo 'source "$HOME/.local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+echo 'source "$HOME/.local/bin/virtualenvwrapper.sh"' >> ~/.bashrc
 
 # install pyenv
 # curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
