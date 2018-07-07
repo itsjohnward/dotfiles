@@ -5,7 +5,7 @@ xz-utils tk-dev libffi-dev python
 
 # make sure pip and virtualenv are installed
 python -m pip install --user --upgrade pip
-python -m pip install --user virtualenv
+python -m pip install --user virtualenv virtualenvwrapper
 
 # install pyenv
 # curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
@@ -21,4 +21,4 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git "$HOME/.pyenv/plugins/py
 git clone https://github.com/pyenv/pyenv-virtualenvwrapper.git "$HOME/.pyenv/plugins/pyenv-virtualenvwrapper"
 echo 'PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"' >> ~/.bashrc
 echo 'pyenv virtualenvwrapper_lazy' >> ~/.bashrc
-git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
+git clone git://github.com/pyenv/pyenv-update.git "$HOME/.pyenv/plugins/pyenv-update"
