@@ -10,4 +10,4 @@ for:
     only:
       - image: Ubuntu
   build_script:
-  - sh: /bin/bash ./scripts/install-python.sh && source ~/.bashrc && /bin/bash ubuntu.bootstrap.sh
+  - sh: /bin/bash ./scripts/install-python.sh && source ~/.bashrc && pyenv install 3.7.0 && source ~/.bashrc && /bin/bash ubuntu.bootstrap.sh
