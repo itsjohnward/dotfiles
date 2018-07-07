@@ -7,6 +7,10 @@ xz-utils tk-dev libffi-dev python
 python -m pip install --user --upgrade pip
 python -m pip install --user virtualenv virtualenvwrapper
 
+echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bashrc
+echo 'export PROJECT_HOME=$HOME' >> ~/.bashrc
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+
 # install pyenv
 # curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
