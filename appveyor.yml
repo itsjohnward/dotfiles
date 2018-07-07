@@ -10,4 +10,4 @@ for:
     only:
       - image: Ubuntu
   build_script:
-  - sh: sudo /bin/bash ./scripts/install-python.sh; /bin/bash ubuntu.bootstrap.sh
+  - sh: /bin/bash ./scripts/install-python.sh; source ~/.bashrc; /bin/bash ubuntu.bootstrap.sh
