@@ -1,8 +1,43 @@
 {
-    "search.location": "panel",
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.showUpdateMessage": false,
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
-    "workbench.colorTheme": "Monokai"
+    "search.location": "panel",
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Monokai",
+    "editor.minimap.enabled": false,
+    "html.format.wrapLineLength": 100,
+    "editor.wordWrap": "on",
+    "editor.rulers": [
+        100
+    ],
+    "search.useIgnoreFiles": false,
+    "editor.scrollBeyondLastLine": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.keymap": "chorded",
+    "gitlens.advanced.messages": {
+        "suppressFileNotUnderSourceControlWarning": true,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "editor.fontFamily": "SourceCodePro-Semibold",
+    "editor.fontSize": 11,
+    "workbench.fontAliasing": "auto",
+    "bracketPairColorizer.showHorizontalScopeLine": false,
+    "editor.occurrencesHighlight": false,
+    "bracketPairColorizer.showVerticalScopeLine": false,
+    "editor.tabSize": 2,
+    "editor.accessibilitySupport": "off",
+    "editor.cursorBlinking": "blink",
+    "prettier.singleQuote": true,
+    "editor.autoIndent": true,
+    "prettier.requireConfig": true,
+    "highlight-matching-tag.style": {
+        "textDecoration": "underline"
+    },
+    "highlight-matching-tag.highlightSelfClosing": true,
+    "highlight-matching-tag.leftStyle": null,
+    "highlight-matching-tag.rightStyle": null,
+    "gitlens.mode.active": "zen"
 }
