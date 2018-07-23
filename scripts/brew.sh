@@ -1,7 +1,18 @@
 #!/bin/sh
 
+xcode-select --install
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install caskroom/cask/brew-cask
+
+brew install readline xz pyenv
+pyenv install 2.7.15
+pyenv install 3.6.6
+pyenv global 3.6.6 2.7.15
+
+brew tap caskroom/cask
+brew cask install google-cloud-sdk
+
 brew cask install google-chrome
 brew cask install atom
 brew cask install blender
