@@ -1,0 +1,1 @@
+apt install stow -y
