@@ -15,8 +15,10 @@ syntax on
 set backspace=indent,eol,start
 
 packadd! onedark.vim
-
+" packadd! dracula-theme
+" colorscheme dracula
 colorscheme onedark
+" colorscheme PaperColor
 
 " -- shift-tab to detab --
 " for command mode

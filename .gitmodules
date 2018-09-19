@@ -37,3 +37,9 @@
 [submodule "configs/.vim/pack/plugins/start/vim-tmux-navigator"]
 	path = configs/.vim/pack/plugins/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "configs/vim/.vim/pack/john/opt/dracula-theme"]
+	path = configs/vim/.vim/pack/john/opt/dracula-theme
+	url = https://github.com/dracula/vim.git
+[submodule "configs/vim/.vim/pack/john/opt/onedark.vim"]
+	path = configs/vim/.vim/pack/john/opt/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
