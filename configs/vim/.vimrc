@@ -26,7 +26,7 @@ nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-Tab> <C-d>
 
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " Use mouse to select in visual block mode
 set mouse+=a
