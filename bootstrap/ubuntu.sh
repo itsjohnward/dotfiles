@@ -12,14 +12,21 @@ git clone --recurse-submodules https://github.com/itsjohnward/dotfiles.git $dots
 cd $dots
 
 cd $dots/install
-chmod 700 ubuntu.stow.sh
-./ubuntu.stow.sh
+./stow.sh
 
 cd $dots/configs
 stow bash
 
 cd $dots/install
-chmod 700 ubuntu.python.sh
-./ubuntu.python.sh
+./python.sh
 
-source ~/.bashrc
+cd $dots/configs
+stow python
+
+cd $dots/install
+./node.sh
+
+cd $dots/configs
+stow node
+
+source $HOME/.bashrc
