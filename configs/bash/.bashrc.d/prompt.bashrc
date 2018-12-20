@@ -44,6 +44,6 @@ function parse_git_dirty {
 	fi
 }
 
-
-
-export PS1="\w\[\e[32;40m\]\`parse_git_branch\`\[\e[m\]$ "
+# Git prompts are too slow on WSL
+# export PS1="\w\[\e[32;40m\]\`parse_git_dirty\`\[\e[m\]$ "
+export PS1="\n\[\e[32m\][\[\e[m\]\[\e[32m\]\t\[\e[m\]\[\e[32m\]]\[\e[m\] \[\e[34m\]\w\[\e[m\]\n\[\e[35m\]->\[\e[m\] "
