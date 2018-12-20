@@ -1,2 +1,4 @@
 .vagrant/
 configs/vim/.vim/.netrwhist
+*.swp
+*.swo
