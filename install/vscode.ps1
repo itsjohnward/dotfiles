@@ -1,3 +1,6 @@
+scoop bucket add extras
+scoop install vscode
+
 $env:Path += ";C:\Program Files\Microsoft VS Code" # register the new "code" command
 
 # install vscode extensions
