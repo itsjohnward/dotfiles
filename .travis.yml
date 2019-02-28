@@ -1,0 +1,10 @@
+language: shell
+script: wget -O - https://github.com/itsjohnward/dotfiles/raw/master/bootstrap/ubuntu.sh | bash
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+    - os: linux
+      dist: trusty
+    - os: linux
+      dist: precise
