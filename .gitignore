@@ -1,4 +1,3 @@
-*<M-C-S-F3>:wq
 *.swp
 .vagrant/
 configs/vim/.vim/.netrwhist
